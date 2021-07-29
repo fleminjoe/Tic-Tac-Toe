@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+ }
+ body {
+     color: #545454;
+     display: flex;
+     zoom: 70%;
+     font-family: sans-serif;
+     justify-content: center;
+ }  
+ .container {
+     background-color: #14BDAC;
+     margin: 50px;
+     padding: 50px;
+     border-radius: 25px;
+     /* height: 500px;
+     width: 500px; */
+ }
+ .title {
+     text-align: center;
+ }
+ .title span {
+     color: #F2EBD3;
+ }
+ .status-action {
+     display: flex;
+     font-size: 20px;
+     font-weight: 200;
+     margin-top: 25px;
+     justify-content: space-around;
+     height: 30px;
+ }
+ .status {
+    color: #F2EBD3;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #545454;
+
+ }
+ .status span {
+     color: #545454;
+     width: 150px;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 25px; 
+     background-color: #F2EBD3;
+ }
+ .reset {
+     cursor: pointer;
+     width: 125px;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 25px;
+     background-color: #F2EBD3;
+ }
+ .reset:hover {
+     color: #F2EBD3;
+     background-color: #545454;
+ }
+ .game-grid {
+     background-color: #0DA194;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(3,1fr);
+     grid-gap: 15px;
+     margin-top: 50px;
+    
+ }
+ .game-cell {
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     vertical-align: middle;
+     align-items: center;
+     height: 200px;
+     width: 200px;
+     background-color: #14BDAC;
+ }
+ .x::before {
+    content: "✖";
+    font-size: 150px;
+    cursor: default;
+ }
+ .o::before {
+    content: "O";
+    font-size: 150px;
+    color: #F2EBD3;
+    cursor: default;
+ }
+ .won::before {
+     color: #BD022F;
+ }
+      
+@media only screen and (max-width: 1024px) {
+    .game-grid {
+        margin-top: 25px;
+        grid-gap: 10px;
+    }
+    .game-cell {
+        height: 150px;
+        width: 150px;
+    }
+    .x::before {
+        font-size: 100px;
+    }
+    .o::before {
+        font-size: 100px;
+    }
+
+}
+@media only screen and (max-width: 540px) {
+    .container {
+        margin: 25px;
+        padding: 25px;
+    }
+    .game-cell {
+        height: 100px;
+        width: 100px;
+    }
+    .x::before {
+        font-size: 75px;
+    }
+    .o::before {
+        font-size: 75px;
+    }
+
+}
